@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+
+<style>
+
+.siatka {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr;
+  grid-template-rows: 1.4fr 0.2fr 1.1fr 1.3fr;
+  grid-template-areas:  "NAV NAV" "zdjecie WELCOME_SECTION" "TILE1 TILE1" "TILE3 TILE2";
+}
+
+.zdjecie { grid-area: zdjecie; }
+
+.WELCOME_SECTION { grid-area: WELCOME_SECTION; background-color:yellow; justify-conetnt:center; width:100%; height:251;}
+
+.BANER { grid-area: BANER; background-color:blue; width:100%; height:100%;}
+
+.NAV { grid-area: NAV; background-color:pink; width:100%; height:100%; position:fixed; top=0; left=0;}
+
+.TILE1 { grid-area: TILE1; background-color:green; width:100%; height:100%;}
+
+.TILE2 { grid-area: TILE2; background-color:purple; width:100%; height:100%;}
+
+.TILE3 { grid-area: TILE3; background-color:red; width:100%; height:100%;}
+
+iframe {
+  height: 200px;
+  width:300px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  iframe {
+    height:140px;
+    width:210px;
+  }
+
+</style>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+  <header>
+    <nav id="navbar" style="position:fixed; top=0; left=0;">
+    <ul>
+      <li><a href="#projekt1">projekt1</a></li> 
+      <li><a href="#projekt2">projekt2</a></li>
+    </ul>
+  </nav>
+  </header>
+  
+<body>
+
+<div class="siatka">
+   <div class="NAV">
+    <nav id="navbar">
+    <ul>
+      <li><a href="#projekt1">projekt1</a></li> 
+      <li><a href="#projekt2">projekt2</a></li>
+    </ul>
+  </nav>
+  </div>
+  <div class="zdjecie"> 
+    <img id="Un" src="https://ocdn.eu/pulscms-transforms/1/ShlktkqTURBXy84MDQzMmM2OTZhMWQ1ZjkzNjIyYjc3NzdhYzdkYzg2OC5qcGVnkZMCAM0B5A">
+  </div>
+  <div>
+      <section id="welcome-section" style="height=100vh; padding-top: 0px;
+  margin-top: 0px;
+  display: block;
+  height: 100vh;">
+        <h1>welcome section</h1>
+        <a id="profile-link" href="https://github.com/edith1" target="_blank"></a>
+      </section>
+  </div>
+  <div class="TILE1" id="projekt1">TILE1</div>
+  <div class="TILE2" id="projekt2">TILE2</div>
+
+  <section id="projects">
+  <div data-role="tile" class="project-tile">
+      <a href="" id="link do projektu"></a>
+      <iframe src="https://www.youtube.com/embed/vAjZZzKdrWw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    
+  </div>
+  </section>
+</div>
+
+</body>
+
+</html>
